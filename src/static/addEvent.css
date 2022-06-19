@@ -1,0 +1,12 @@
+.grid__event {
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.register input[type="text"],
+.register input[type="datetime-local"] {
+  width: 100%;
+}

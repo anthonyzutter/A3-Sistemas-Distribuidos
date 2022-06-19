@@ -51,7 +51,6 @@ nav span {
 nav p {
   font-size: 25px;
   font-weight: 600;
-  cursor: default;
 }
 
 nav li {
@@ -107,27 +106,26 @@ nav .btn {
 
 /* NAVIGATION BAR ENDS */
 
-
 /* MEDIA QUERIES - RESPONSIVE LAYOUT */
 
 /* DESKTOP - LAPTOP - TABLET */
-@media screen and (min-width: 850px){
+@media screen and (min-width: 850px) {
   nav .small-screens {
     display: none;
   }
 }
 
 /* MOBILE */
-@media screen and (max-width: 850px){
-  nav{
+@media screen and (max-width: 850px) {
+  nav {
     padding: 1rem 5vw;
   }
-  
-  nav .small-screens i{
+
+  nav .small-screens i {
     font-size: 25px;
     cursor: pointer;
   }
-  
+
   nav .big-screens {
     display: none;
   }

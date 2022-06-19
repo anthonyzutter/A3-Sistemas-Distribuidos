@@ -1,94 +1,105 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: #121212;
-    font-family: "Montserrat", serif;
-    margin: 0;
-    min-height: 100%;
+  color: #121212;
+  font-family: "Montserrat", serif;
+  margin: 0;
+  min-height: 100%;
 }
 .align {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 .align__item--start {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 .align__item--end {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 .site__logo {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 input {
-    border: 0;
-    font: inherit;
+  border: 0;
+  font: inherit;
+  margin-top: 5px;
 }
 input::placeholder {
-    color: #676767;
+  color: #676767;
 }
 .form__field {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .form input {
-    outline: 0;
-    padding: 0.5rem 1rem;
+  outline: 0;
+  padding: 0.5rem 1rem;
 }
-.form input[type="email"], .form input[type="password"] {
-    width: 100%;
+.form input[type="email"],
+.form input[type="password"],
+.register input[type="text"],
+.register input[type="datetime-local"] {
+  width: 100%;
 }
 .grid {
-    margin: 0 auto;
-    max-width: 25rem;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
 }
 h2 {
-    color: #121212;
-    font-size: 2.75rem;
-    font-weight: 600;
-    margin: 0 0 1rem;
-    text-transform: uppercase;
+  color: #121212;
+  font-size: 2.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
 }
 svg {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 a {
-    color: #121212;
+  color: #121212;
 }
 .register {
-    box-shadow: 0 0 250px #000;
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 10px;
-    margin-top: 40%;
+  box-shadow: 0 0 250px #000;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-top: 20%;
 }
 .register input {
-    border: 1px solid #242c37;
-    border-radius: 999px;
-    background-color: transparent;
-    text-align: center;
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  text-align: center;
 }
-.register input[type="email"], .register input[type="password"] {
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
-    background-position: 1rem 50%;
+.register input[type="email"],
+.register input[type="password"],
+.register input[type="text"],
+.register input[type="datetime-local"] {
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1rem 50%;
 }
 
 .register input[type="submit"] {
-    background-color: #4caf50;    
-    color: #fff;
-    margin-bottom: 1rem;
-    width: 98%;
-    padding: 0.5rem 1rem;
-    margin: 0 0 0 0.5rem;
-    border: 1px solid #4caf50;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    font-size: 17px;
+  background-color: #4caf50;
+  color: #fff;
+  margin-bottom: 1rem;
+  width: 98%;
+  padding: 0.5rem 1rem;
+  margin: 0 0 0 0.5rem;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 17px;
+}
+
+#link {
+  margin-left: 4px;
 }
