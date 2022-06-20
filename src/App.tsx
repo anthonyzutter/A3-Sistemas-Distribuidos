@@ -6,6 +6,7 @@ import "./App.css";
 import Login from "./components/User/Login";
 import Signup from "./components/User/Signup";
 import AddEvent from "./components/Admin/AddEvent";
+import EventList from "./components/User/EventList";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <ul>
           <li className="big-screens">
             <Link to={"/"}>Início</Link>
-            <a href="#">Eventos</a>
+            <Link to={"/events"}>Eventos</Link>
             <a href="#">Sobre</a>
             <Link to={"/signup"}>
               <button className="btn registerAcc">Cadastro</button>
@@ -33,11 +34,13 @@ function App() {
           </li>
         </ul>
       </nav>
+
       <div>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/addEvent" element={<AddEvent />} />
+          <Route path="/events" element={<EventList />}></Route>
         </Routes>
       </div>
     </div>
