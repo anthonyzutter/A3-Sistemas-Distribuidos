@@ -1,5 +1,5 @@
-import "../../static/Login.css";
-import "../../static/addEvent.css";
+import "../static/Login.css";
+import "../static/addEvent.css";
 
 const AddEvent = () => {
   return (
