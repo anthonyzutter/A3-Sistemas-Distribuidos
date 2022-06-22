@@ -11,8 +11,8 @@ const Signup = () => {
 
         <form action="" method="post" className="form">
           <div className="form__field">
-            <label>Nome</label>
-            <input type="text" placeholder="Nome completo" required></input>
+            <label>Usuário</label>
+            <input type="text" placeholder="" required></input>
           </div>
 
           <div className="form__field">
