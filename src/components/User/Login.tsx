@@ -1,39 +1,47 @@
 import "../../static/Login.css";
 import { Link } from "react-router-dom";
+import React, { Component } from "react";
 
-const Login = () => {
-  return (
-    <div className="grid align__item">
-      <div className="register">
-        <h2>
-          <a>Entrar</a>
-        </h2>
+import AuthService from "../../service/AuthService";
 
-        <form action="" method="post" className="form">
-          <div className="form__field">
-            <label>Email</label>
-            <input type="email" placeholder="email@gmail.com" required></input>
-          </div>
 
-          <div className="form__field">
-            <label>Senha</label>
-            <input type="password" placeholder="***********" required></input>
-          </div>
+export default class Login extends Component {
+  render() {
+    return (
+      <div className="grid align__item">
+        <div className="register">
+          <h2>
+            <a>Entrar</a>
+          </h2>
 
-          <div className="form__field">
-            <input type="submit" value="Entrar"></input>
-          </div>
-        </form>
+          <form action="" method="post" className="form">
+            <div className="form__field">
+              <label>Email</label>
+              <input
+                type="email"
+                placeholder="email@gmail.com"
+                required
+              ></input>
+            </div>
 
-        <p>
-          Não possui uma conta?
-          <Link to={"/signup"} id="link">
-            Criar conta
-          </Link>
-        </p>
+            <div className="form__field">
+              <label>Senha</label>
+              <input type="password" placeholder="***********" required></input>
+            </div>
+
+            <div className="form__field">
+              <input type="submit" value="Entrar"></input>
+            </div>
+          </form>
+
+          <p>
+            Não possui uma conta?
+            <Link to={"/signup"} id="link">
+              Criar conta
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Login;
+    );
+  }
+}

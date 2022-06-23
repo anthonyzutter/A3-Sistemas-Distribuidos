@@ -1,7 +1,13 @@
 export default interface EventData {
-    id?: any | null,
-    name: string,
-    description: string,
-    data?: Date,
-    quantity: number
-  }
+  id?: any | null;
+  nome: string;
+  descricao: string;
+  capacidade: number;
+  dataInicio: Date;
+  dataFim: Date;
+  estado: string;
+  cidade: string;
+  rua: string;
+  numero: string;
+  imagemURL: string;
+}

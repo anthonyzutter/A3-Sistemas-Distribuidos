@@ -10,7 +10,7 @@ const get = (id: number) => {
   return http.get(`/events/${id}`);
 };
 
-const createEvent = (data: EventData) => {
+const createEvent = (data: any) => {
   return http.post("/events", data);
 };
 
