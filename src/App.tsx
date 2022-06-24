@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
+import { Helmet } from 'react-helmet'
+
 
 import Login from "./components/User/Login";
 import Signup from "./components/User/Signup";
@@ -12,15 +14,18 @@ import EventDetail from "./components/User/EventDetail";
 function App() {
   return (
     <div>
+      <Helmet>
+          <title>Receba Reservas</title>
+        </Helmet>
       <nav className="flex align-center">
-        <Link to={"/"}>
+        <Link to={"/events"}>
           <p id="title">
             <span>Receba </span>Reservas
           </p>
         </Link>
         <ul>
           <li className="big-screens">
-            <Link to={"/"}>Início</Link>
+            <Link to={"/events"}>Início</Link>
             <Link to={"/events"}>Eventos</Link>
             <a href="#">Sobre</a>
             <Link to={"/signup"}>

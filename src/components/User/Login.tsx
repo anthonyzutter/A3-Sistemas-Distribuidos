@@ -1,6 +1,7 @@
 import "../../static/Login.css";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
+import { Helmet } from 'react-helmet'
 
 import AuthService from "../../service/AuthService";
 
@@ -9,6 +10,9 @@ export default class Login extends Component {
   render() {
     return (
       <div className="grid align__item">
+        <Helmet>
+          <title>Login</title>
+        </Helmet>
         <div className="register">
           <h2>
             <a>Entrar</a>

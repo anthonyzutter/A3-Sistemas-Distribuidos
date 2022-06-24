@@ -17,7 +17,7 @@ const EventCard = () => {
           
           <span>Data: 04/Maio/2022</span>   
           <br />
-          <span>Descrição: Festa dedicada para o publico infantil.</span>
+          <span>Descrição: Festa dedicada para o público do tik tok.</span>
             <input type="submit" value="Confirmar presença"></input>
 
         </div>

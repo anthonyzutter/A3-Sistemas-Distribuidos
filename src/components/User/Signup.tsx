@@ -1,9 +1,13 @@
 import "../../static/Login.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Signup = () => {
   return (
     <div className="grid align__item">
+      <Helmet>
+        <title>Cadastro</title>
+      </Helmet>
       <div className="register">
         <h2>
           <a>Cadastro</a>

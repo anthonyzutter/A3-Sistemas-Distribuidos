@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EventDataService from "../service/EventService";
+import { Helmet } from "react-helmet";
 
 import EventData from "../event.type";
 import "../static/Login.css";
@@ -72,6 +73,9 @@ const AddEvent = () => {
 
   return (
     <div className="grid__event align__item">
+      <Helmet>
+        <title>Cadastro</title>
+      </Helmet>
       <div className="register">
         <h2>
           <a>Cadastrar Evento</a>
