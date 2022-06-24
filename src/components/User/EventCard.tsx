@@ -2,7 +2,7 @@ import "../../static/EventList.css";
 import { Link } from "react-router-dom";
 import EventDetail from "./EventDetail";
 
-const EventCard = () => {
+const EventCard = (props:any) => {
   return (
     <div className="box">
       <div className="box-img">
