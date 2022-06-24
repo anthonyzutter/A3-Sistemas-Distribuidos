@@ -10,3 +10,7 @@
 .register input[type="datetime-local"] {
   width: 100%;
 }
+
+.register {
+  margin-top: 10%;
+}

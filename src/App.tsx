@@ -28,6 +28,7 @@ function App() {
             <Link to={"/events"}>Início</Link>
             <Link to={"/events"}>Eventos</Link>
             <a href="#">Sobre</a>
+            <Link to={"/addEvent"}>Novo Evento</Link>
             <Link to={"/signup"}>
               <button className="btn registerAcc">Cadastro</button>
             </Link>

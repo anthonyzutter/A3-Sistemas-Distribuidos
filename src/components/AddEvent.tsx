@@ -3,7 +3,6 @@ import EventDataService from "../service/EventService";
 import { Helmet } from "react-helmet";
 
 import EventData from "../event.type";
-import "../static/Login.css";
 import "../static/addEvent.css";
 
 const AddEvent = () => {
