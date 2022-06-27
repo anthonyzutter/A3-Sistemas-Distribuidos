@@ -1,5 +1,4 @@
 import http from "../http-common";
-import AuthHeader from './AuthHeader';
 import EventData from "../event.type"
 
 const getAll = () => {
@@ -14,6 +13,10 @@ const createEvent = (data: any) => {
   return http.post("/events", data);
 };
 
+const createUser = (data: any) => {
+  return http.post("/user", data);
+};
+
 const updateEvent = (id: number, data: EventData) => {
   return http.put(`/events/${id}`, data);
 };
@@ -26,6 +29,7 @@ const EventService = {
   getAll,
   get,
   createEvent,
+  createUser,
   updateEvent,
   deleteEvent
 }

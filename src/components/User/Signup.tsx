@@ -1,8 +1,50 @@
 import "../../static/Login.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import React, { useState } from "react";
+import EventDataService from "../../service/EventService";
+
 
 const Signup = () => {
+  const initialUserState = {
+    id: null,
+    email: "",
+    password: "",
+  };
+
+  const [user, setUser] = useState(initialUserState);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (user: any) => {
+    const { email, value } = user.target;
+    setUser({ ...user, [email]: value });
+  };
+
+  const saveUser = () => {
+    var data = {
+      email: user.email,
+      passworld: user.password,
+    };
+
+    EventDataService.createUser(data)
+      .then((response: any) => {
+        setUser({
+          id: response.data.id,
+          email: response.data.email,
+          password: response.data.password,
+        });
+        setSubmitted(true);
+        console.log(response.data);
+      })
+      .catch((e: any) => {
+        console.log(e);
+      });
+  };
+
+  const newUser = () => {
+    setUser(initialUserState);
+    setSubmitted(false);
+  };
   return (
     <div className="grid align__item">
       <Helmet>
@@ -14,28 +56,24 @@ const Signup = () => {
         </h2>
 
         <form action="" method="post" className="form">
-          <div className="form__field">
-            <label>Usuário</label>
-            <input type="text" placeholder="" required></input>
-          </div>
 
           <div className="form__field">
             <label>Email</label>
-            <input type="email" placeholder="email@gmail.com" required></input>
+            <input type="email" value={user.email} onChange={handleInputChange} placeholder="email@gmail.com" required></input>
           </div>
 
           <div className="form__field">
             <label>Senha</label>
-            <input type="password" placeholder="***********" required></input>
+            <input type="password" value={user.password} onChange={handleInputChange} placeholder="***********" required></input>
           </div>
 
-          <div className="form__field">
+          {/* <div className="form__field">
             <label>Repetir senha</label>
-            <input type="password" placeholder="***********" required></input>
-          </div>
+            <input type="password" placeholder="***********" required ></input>
+          </div> */}
 
           <div className="form__field">
-            <input type="submit" value="Cadastrar"></input>
+            <input type="submit" value="Cadastrar" onClick={saveUser}></input>
           </div>
         </form>
 

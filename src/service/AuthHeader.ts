@@ -6,4 +6,4 @@ export default function AuthHeader() {
   } else {
     return {};
   }
-} 
+}     
