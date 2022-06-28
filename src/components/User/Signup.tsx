@@ -1,9 +1,8 @@
 import "../../static/Login.css";
-import { Link } from "react-router-dom";
+import { Link, Route  } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import React, { useState } from "react";
 import EventDataService from "../../service/EventService";
-
 
 const Signup = () => {
   const initialUserState = {
@@ -21,6 +20,7 @@ const Signup = () => {
   };
 
   const saveUser = () => {
+
     var data = {
       email: user.email,
       passworld: user.password,
@@ -34,6 +34,7 @@ const Signup = () => {
           password: response.data.password,
         });
         setSubmitted(true);
+        // <Route path="/login"></Route>
         console.log(response.data);
       })
       .catch((e: any) => {
@@ -55,7 +56,7 @@ const Signup = () => {
           <a>Cadastro</a>
         </h2>
 
-        <form action="" method="post" className="form">
+        <form action="" className="form">
 
           <div className="form__field">
             <label>Email</label>
@@ -76,6 +77,8 @@ const Signup = () => {
             <input type="submit" value="Cadastrar" onClick={saveUser}></input>
           </div>
         </form>
+        <p>{submitted ? "Usuário criado" : ""}</p>
+        <br />
 
         <p>
           Já possui uma conta?

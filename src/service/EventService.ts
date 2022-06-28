@@ -1,5 +1,7 @@
 import http from "../http-common";
 import EventData from "../event.type"
+import authHeader from './AuthHeader';
+
 
 const getAll = () => {
   return http.get("/events");
