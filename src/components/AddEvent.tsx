@@ -151,6 +151,7 @@ const AddEvent = () => {
                     placeholder="UF"
                     value={event.estado}
                     required
+                    maxLength={2}
                     onChange={handleInputChange}
                   />
                 </div>

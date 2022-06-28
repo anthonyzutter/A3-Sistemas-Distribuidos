@@ -16,7 +16,7 @@ const createEvent = (data: any) => {
 };
 
 const createUser = (data: any) => {
-  return http.post("/user", data);
+  return http.post("/users", data);
 };
 
 const updateEvent = (id: number, data: EventData) => {
