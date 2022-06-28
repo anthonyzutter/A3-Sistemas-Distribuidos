@@ -8,6 +8,8 @@ export default interface EventData {
   estado: string;
   cidade: string;
   rua: string;
+  bairro: string;
   numero: string;
+  complemento: string;
   imagemURL: string;
 }
