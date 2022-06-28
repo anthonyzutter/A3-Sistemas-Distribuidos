@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import EventDataService from "../../service/EventService"
 
 const EventList = () => {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<any[]>([]);
 
   useEffect(() => {
     retrieveQuadras();
@@ -25,10 +25,14 @@ const EventList = () => {
 
   return (
     <div className="events-container">
+      {events &&
+            events.map((event, index) => (
+                <EventCard event={event} />
+            ))}
       <Helmet>
         <title>Eventos</title>
       </Helmet>
-      <EventCard />
+      
       <EventCard />
       <EventCard />
       <EventCard />
